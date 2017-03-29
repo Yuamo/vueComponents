@@ -8,7 +8,7 @@
         props: ['btn'],
         data() {
             return {
-                backg: ''
+                backg: this.btn.background
             }
         },
         methods: {
@@ -25,9 +25,6 @@
                 let b = b1 >= 0 ? b1 : parseInt(col.substring(5, 7), 16);
                 this.backg = 'rgb(' + r + ',' + g + ',' + b + ')';
             }
-        },
-        created() {
-            this.backg = this.btn.background;
         }
     }
 </script>
